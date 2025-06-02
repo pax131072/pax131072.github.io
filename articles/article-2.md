@@ -1,7 +1,7 @@
 ---
 title: "前端元件設計思路"
 date: "2025-05-29"
-imageUrl: "https://picsum.photos/seed/article-2/800/400"
+image: "front-component"
 ---
 
 元件化是現代前端開發的核心概念。以下是幾個建議：

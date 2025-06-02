@@ -1,7 +1,7 @@
 ---
 title: "每日站會小劇場"
 date: "2025-05-29"
-imageUrl: "https://picsum.photos/seed/standup/800/400"
+image: "standup"
 ---
 
 每日站會時間到，請問今天有什麼要回報的？

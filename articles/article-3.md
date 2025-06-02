@@ -1,7 +1,7 @@
 ---
 title: "API 設計原則與版本控制"
 date: "2025-05-29"
-imageUrl: "https://picsum.photos/seed/article-3/800/400"
+image: "design-pattern"
 ---
 
 良好的 API 設計需兼顧一致性、簡潔性與可擴充性。建議遵循以下原則：

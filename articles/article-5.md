@@ -1,7 +1,7 @@
 ---
 title: "命名真的很難"
 date: "2025-05-29"
-imageUrl: "https://picsum.photos/seed/naming/800/400"
+image: "naming"
 ---
 
 誰說命名不重要？命名是一種對混亂世界的溫柔整理。

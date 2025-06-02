@@ -1,7 +1,7 @@
 ---
 title: "工程師 Debug 生存指南"
 date: "2025-05-29"
-imageUrl: "https://picsum.photos/seed/debug/800/400"
+image: "debug"
 ---
 
 你不是不會寫程式，你只是還沒找到 bug 的藏身之處。
