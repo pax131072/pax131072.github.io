@@ -1,7 +1,7 @@
 ---
-title: "做了一個新的個人網站 UI"
-date: "2025-05-30"
-image: "new-blog-with-react"
+title: 做了一個新的個人網站 UI
+date: 2025-05-30
+tags: [react]
 ---
 
 花了 2 天的時間，重新改造了自己的個人網站。
