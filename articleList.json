@@ -1,5 +1,12 @@
 [
   {
+    "slug": "git-work-flows-in-one-guide",
+    "title": "一篇文章帶你看懂 git flow, github flow 和 gitlab flow",
+    "date": "2025-06-14",
+    "tags": ["git"],
+    "summary": "昨天重新理解了幾種主流的 git 版控方法，用文章稍微紀錄一下。Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共同必修之一。它是程式的追蹤管理工具，類似於 gira, trello 等工具，軟體工程師如果在程式上沒有一致且可追蹤的進度，整個團隊會隨著「系統」的規模出現無法協作的狀況"
+  },
+  {
     "slug": "laravel-style-validation-with-java",
     "title": "寫了一個 Laravel 風格的 Java Map Validator",
     "date": "2025-06-12",
