@@ -14,7 +14,7 @@ Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共
 
 ![Git flow 流程圖](images/git-work-flows-in-one-guide/git-flow.png)
 
-Git flow 主要由 5 個分支所組成，分別是 2 個常駐分支（master 和 develop）和 3 個暫時分支（feature, release, and hotfix）組成。常駐分支顧名思義，是無論開發完成與否都會持續存在的分支，master 分支就是給外人看的、發布正式用的 main branch，而 develop 則是開發用的、供內部使用的工作分支；而暫時分支分為三種，分別為個人或小組用（feature）、開發完成後的發布前測試（release）、和發布之後的緊急熱修（hitfix）。Git flow 與其他兩種開發流最大的差別是【**Git flow 存在著明確的開發起點與開發終點**。】這種方案很適合具有明確開發節點的工作團隊，但不適合隨時都有新功能在同步開發的工作流程。
+Git flow 主要由 5 個分支所組成，分別是 2 個常駐分支（master 和 develop）和 3 個暫時分支（feature, release, and hotfix）組成。常駐分支顧名思義，是無論開發完成與否都會持續存在的分支，master 分支就是給外人看的、發布正式用的 main branch，而 develop 則是開發用的、供內部使用的工作分支；而暫時分支分為三種，分別為個人或小組用（feature）、開發完成後的發布前測試（release）、和發布之後的緊急熱修（hotfix）。Git flow 與其他兩種開發流最大的差別是【**Git flow 存在著明確的開發起點與開發終點**。】這種方案很適合具有明確開發節點的工作團隊，但不適合隨時都有新功能在同步開發的工作流程。
 
 Git flow 開始於 develop。
 

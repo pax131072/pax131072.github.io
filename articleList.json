@@ -1,15 +1,22 @@
 [
   {
+    "slug": "mysql-offset-performance-issue-and-optimization",
+    "title": "SQL 簡潔不等於高效：OFFSET 語法的效能問題",
+    "date": "2025-06-16",
+    "tags": ["mysql"],
+    "summary": "昨天重新理解了幾種主流的 git 版控方法，用文章稍微紀錄一下。Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共同必修之一。它是程式的追蹤管理工具，類似於 gira, trello 等工具，軟體工程師如果在程式上沒有一致且可追蹤的進度，整個團隊會隨著「系統」的規模出現無法協作的狀況"
+  },
+  {
     "slug": "git-work-flows-in-one-guide",
     "title": "一篇文章帶你看懂 git flow, github flow 和 gitlab flow",
-    "date": "2025-06-14",
+    "date": "2025-06-12",
     "tags": ["git"],
     "summary": "昨天重新理解了幾種主流的 git 版控方法，用文章稍微紀錄一下。Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共同必修之一。它是程式的追蹤管理工具，類似於 gira, trello 等工具，軟體工程師如果在程式上沒有一致且可追蹤的進度，整個團隊會隨著「系統」的規模出現無法協作的狀況"
   },
   {
     "slug": "laravel-style-validation-with-java",
     "title": "寫了一個 Laravel 風格的 Java Map Validator",
-    "date": "2025-06-12",
+    "date": "2025-06-11",
     "tags": ["java", "spring-boot"],
     "summary": "先說結論，我還是覺得 DTO 比較好用。這 2 個月在熟悉公司的程式和風格，整體而言，非常不適應。主要是目前主管的一些開發習慣跟我之前的經驗相差甚遠。主管不喜歡用 DTO，她覺得把參數額外包裝成一個類別（或物件）是很反直覺得事情，所以限制參數都只能用 Map<String, Object> 傳遞。"
   },
@@ -47,12 +54,5 @@
     "date": "2025-05-25",
     "tags": ["debug"],
     "summary": "你不是不會寫程式，你只是還沒找到 bug 的藏身之處。 - 先問自己：這段程式「理論上」會動嗎？ - 別小看 console.log，它比你朋友還誠實 - 當你開始懷疑人生的時候，問題往往在 .env 記得：解 bug 是工程師和自己內心的對話，不是單純對抗程式。"
-  },
-  {
-    "slug": "article-5",
-    "title": "命名真的很難",
-    "date": "2025-06-03",
-    "tags": [],
-    "summary": "誰說命名不重要？命名是一種對混亂世界的溫柔整理。 - data1, data2, data3 是災難的開始 - isActive 和 hasPermission 比你想像中更能讓人理解 - tmp, xxx, wtf 都會在三個月後成為未解之謎 為了你的未來，請給變數一個能傳宗接代的好名字。"
   }
 ]
