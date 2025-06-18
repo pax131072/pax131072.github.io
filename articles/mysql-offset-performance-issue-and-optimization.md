@@ -36,7 +36,7 @@ LIMIT  180, 20;
 
 ![offset 180 查詢結果](images/mysql-offset-performance-issue-and-optimization/offset-180.png)
 ![offset 1800 查詢結果](images/mysql-offset-performance-issue-and-optimization/offset-1800.png)
-![offset 18000 查詢結果](images/mysql-offset-performance-issue-and-optimization/offset-18000.png)
+![offset 18000 查詢結果](images/mysql-offset-performance-issue-and-optimization/offset-18000.)
 ![offset 180000 查詢結果](images/mysql-offset-performance-issue-and-optimization/offset-180000.png)
 
 這是為什麼呢？要解釋這個問題，我們可以從另一個東西說起：

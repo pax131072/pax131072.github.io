@@ -2,9 +2,9 @@
   {
     "slug": "mysql-offset-performance-issue-and-optimization",
     "title": "SQL 簡潔不等於高效：OFFSET 語法的效能問題",
-    "date": "2025-06-16",
+    "date": "2025-06-17",
     "tags": ["mysql"],
-    "summary": "昨天重新理解了幾種主流的 git 版控方法，用文章稍微紀錄一下。Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共同必修之一。它是程式的追蹤管理工具，類似於 gira, trello 等工具，軟體工程師如果在程式上沒有一致且可追蹤的進度，整個團隊會隨著「系統」的規模出現無法協作的狀況"
+    "summary": "這幾天在回頭補 MySQL 的相關基礎，遇到一個值得記錄的小細節。先說結論：MySQL 的 OFFSET 指令在遇到需要回表的情況下，並不會直接跳過前 n 筆資料，而是會先全數回表撈取，再把前 n 筆資料捨棄，這在分頁操作上來說，如果沒有處理好，很容易遇到「越後面的分頁 loading 越慢」的問題。解法的話 ...可以使用 Keyset Pagination 把 OFFSET n 調整成 WHERE id > n 來快速定位到需要回傳的初始資料；"
   },
   {
     "slug": "git-work-flows-in-one-guide",
@@ -18,7 +18,7 @@
     "title": "寫了一個 Laravel 風格的 Java Map Validator",
     "date": "2025-06-11",
     "tags": ["java", "spring-boot"],
-    "summary": "先說結論，我還是覺得 DTO 比較好用。這 2 個月在熟悉公司的程式和風格，整體而言，非常不適應。主要是目前主管的一些開發習慣跟我之前的經驗相差甚遠。主管不喜歡用 DTO，她覺得把參數額外包裝成一個類別（或物件）是很反直覺得事情，所以限制參數都只能用 Map<String, Object> 傳遞。"
+    "summary": "先說結論，我還是不習慣在 Java 裡用 Map 包裝參數。這 2 個月在熟悉公司的程式和風格。或許是從 php 搬移過來的關係？公司在開發後端系統的時候，不喜歡用 DTO，主管覺得把參數額外包裝成一個類別（或物件）是很反直覺的事情，所以限制參數都只能用 `Map<String, Object>` 傳遞。"
   },
   {
     "slug": "new-blog-with-react",
