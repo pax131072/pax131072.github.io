@@ -1,5 +1,12 @@
 [
   {
+    "slug": "spring-controller-param-binding-mechanism",
+    "title": "HandlerMethodArgumentResolver：Controller 的參數綁定原理",
+    "date": "2025-06-19",
+    "tags": ["java", "spring-boot"],
+    "summary": "這幾天在回頭補 MySQL的相關基礎，遇到一個值得記錄的小細節。先說結論：MySQL 的 OFFSET 指令在遇到需要回表的情況下，並不會直接跳過前 n 筆資料，而是會先全數回表撈取，再把前 n 筆資料捨棄，這在分頁操作上來說，如果沒有處理好，很容易遇到「越後面的分頁 loading 越慢」的問題。解法的話 ...可以使用 Keyset Pagination 把 OFFSET n 調整成 WHERE id > n 來快速定位到需要回傳的初始資料；"
+  },
+  {
     "slug": "mysql-offset-performance-issue-and-optimization",
     "title": "SQL 簡潔不等於高效：OFFSET 語法的效能問題",
     "date": "2025-06-17",
