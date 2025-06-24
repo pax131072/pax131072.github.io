@@ -19,6 +19,8 @@ public ResponseEntity<?> post(String name, int age) {
 }
 ```
 
+![post 請求失敗](images/spring-controller-param-binding-mechanism/post-request-failed.png)
+
 先直接破題：Spring 裡面對 Controller 參數進行請求資料綁定的核心元件叫做 **HandlerMethodArgumentResolver**。綁定的行為會發生在「HandlerMapping 已經找到對應的 HandlerAdapter，並且 HandlerAdapter 在調用 controller 方法之前。」Handler Method Argument Resolver 實質上是一個 Interface，裡面包含了兩個需要 implements 的方法：分別是 supportsParameter 和 resolveArgument。前者決定這個 ArgumentResolver 物件（後稱解析器）支不支援解析特定型態的方法參數，後者則決定解析器裡面的解析與綁定細節要怎麼進行。因此，參數能不能被自動綁定某個數值，取決於參數使用了哪種解析器，以及該解析器支援什麼方式的資料綁定。
 
 ```Java
@@ -50,7 +52,7 @@ public ResponseEntity<?> printResolvers() throws JsonProcessingException {
     return ResponseEntity.status(HttpStatus.OK).body(objectMapper.writeValueAsString(result));
 }
 ```
-![ArgumentResolvers](images/spring-controller-param-binding-mechanism/ArgumentResolvers.png)
+![ArgumentResolvers](images/spring-controller-param-binding-mechanism/argumentResolvers.png)
 
 大致上來說，Resolvers 可以依照是否依賴於參數的註解與資料型態分成 3 種類型：第一種是「基於註解的 Argument Resolver」，這類 Resolver 會根據特定註解來判斷是否適用，通常會搭配明確的注解條件，常見範例有：@RequestParam, @RequestHeader, @RequestBody, @PathVariable, @CookieValue 或 @ModelAttribute，這些註解各自會對應一種（或多種）不同的解析器，像是 @RequestParam 對應到 RequestParamMethodArgumentResolver、@RequestHeader 對應到 RequestHeaderMethodArgumentResolver、或者是 @RequestBody 對應到 RequestResponseBodyMethodProcessor...等。
 

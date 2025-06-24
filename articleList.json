@@ -1,24 +1,31 @@
 [
   {
+    "slug": "spring-mvc-handler-exception-resolver",
+    "title": "HandlerExceptionResolver：Spring MVC 的全域異常處理機制",
+    "date": "2025-06-23",
+    "tags": ["java", "spring-boot"],
+    "summary": "上篇文章說明了 Spring MVC 的參數綁定機制，這邊文章來講錯誤處理機制。要理解 Spring MVC 的錯誤處理機制，我們需要將視角從 Controller 再往外延伸一層，回到整體請求的處理流程。在 Spring MVC 中，當 DispatcherServlet 接收到 HTTP 請求後，首先會透過 HandlerMapping 決定請求應由哪一個 Handler 負責處理該請求，隨後交由對應的 HandlerAdapter 執行該 Handler 的邏輯。"
+  },
+  {
     "slug": "spring-controller-param-binding-mechanism",
     "title": "HandlerMethodArgumentResolver：Controller 的參數綁定原理",
     "date": "2025-06-19",
     "tags": ["java", "spring-boot"],
-    "summary": "這幾天在回頭補 MySQL的相關基礎，遇到一個值得記錄的小細節。先說結論：MySQL 的 OFFSET 指令在遇到需要回表的情況下，並不會直接跳過前 n 筆資料，而是會先全數回表撈取，再把前 n 筆資料捨棄，這在分頁操作上來說，如果沒有處理好，很容易遇到「越後面的分頁 loading 越慢」的問題。解法的話 ...可以使用 Keyset Pagination 把 OFFSET n 調整成 WHERE id > n 來快速定位到需要回傳的初始資料；"
+    "summary": "有些能夠簡單使用的東西，背後都封裝了大量的細節與努力。這幾天在公司處理 API Controller 的時候，遇到了一個小問題：當請求是以 post 方法打進來，同時 request body 是以 application/json 的格式傳遞資料的時候，Controller 這邊如果沒有對需要自動綁定的參數加上 @RequestBody 註解，那綁定機制就會失效。"
   },
   {
     "slug": "mysql-offset-performance-issue-and-optimization",
     "title": "SQL 簡潔不等於高效：OFFSET 語法的效能問題",
     "date": "2025-06-17",
     "tags": ["mysql"],
-    "summary": "這幾天在回頭補 MySQL 的相關基礎，遇到一個值得記錄的小細節。先說結論：MySQL 的 OFFSET 指令在遇到需要回表的情況下，並不會直接跳過前 n 筆資料，而是會先全數回表撈取，再把前 n 筆資料捨棄，這在分頁操作上來說，如果沒有處理好，很容易遇到「越後面的分頁 loading 越慢」的問題。解法的話 ...可以使用 Keyset Pagination 把 OFFSET n 調整成 WHERE id > n 來快速定位到需要回傳的初始資料；"
+    "summary": "這幾天在回頭補 MySQL 的相關基礎，遇到一個值得記錄的小細節。先說結論：MySQL 的 OFFSET 指令在遇到需要回表的情況下，並不會直接跳過前 n 筆資料，而是會先全數回表撈取，再把前 n 筆資料捨棄，這在分頁操作上來說，如果沒有處理好，很容易遇到「越後面的分頁 loading 越慢」的問題。"
   },
   {
     "slug": "git-work-flows-in-one-guide",
     "title": "一篇文章帶你看懂 git flow, github flow 和 gitlab flow",
     "date": "2025-06-12",
     "tags": ["git"],
-    "summary": "昨天重新理解了幾種主流的 git 版控方法，用文章稍微紀錄一下。Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共同必修之一。它是程式的追蹤管理工具，類似於 gira, trello 等工具，軟體工程師如果在程式上沒有一致且可追蹤的進度，整個團隊會隨著「系統」的規模出現無法協作的狀況"
+    "summary": "昨天重新理解了幾種主流的 git 版控方法，用文章稍微紀錄一下。Git 版控應該是前後端、運維、測試 ...等所有軟體工程師的共同必修之一。它是程式的追蹤管理工具，類似於 gira, trello 等工具，軟體工程師如果在程式上沒有一致且可追蹤的進度，整個團隊會隨著「系統」的規模出現無法協作的狀況：..."
   },
   {
     "slug": "laravel-style-validation-with-java",
@@ -47,19 +54,5 @@
     "date": "2025-05-19",
     "tags": [],
     "summary": "元件化是現代前端開發的核心概念。以下是幾個建議： - 每個元件只負責單一邏輯功能 - 支援 props 傳值與 event 調用 - UI 與邏輯分離（可配合 hooks 實作） 這能提升維護性、測試便利性，以及跨專案的重用性。"
-  },
-  {
-    "slug": "article-3",
-    "title": "API 設計原則與版本控制",
-    "date": "2025-05-22",
-    "tags": ["api", "git"],
-    "summary": "良好的 API 設計需兼顧一致性、簡潔性與可擴充性。建議遵循以下原則： - 使用 RESTful 或 GraphQL 規範 - 明確定義錯誤碼與訊息格式 - 加入 /v1/、/v2/ 等版本路徑區分 這可降低破壞性變更的風險，讓前後端合作更加順暢。"
-  },
-  {
-    "slug": "article-4",
-    "title": "工程師 Debug 生存指南",
-    "date": "2025-05-25",
-    "tags": ["debug"],
-    "summary": "你不是不會寫程式，你只是還沒找到 bug 的藏身之處。 - 先問自己：這段程式「理論上」會動嗎？ - 別小看 console.log，它比你朋友還誠實 - 當你開始懷疑人生的時候，問題往往在 .env 記得：解 bug 是工程師和自己內心的對話，不是單純對抗程式。"
   }
 ]
