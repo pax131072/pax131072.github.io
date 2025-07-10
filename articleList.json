@@ -1,5 +1,12 @@
 [
   {
+    "slug": "custom-queryparam-alias-spring-binding",
+    "title": "自定義 @QueryParamAlias 註解：Controller 的參數別名綁定實踐",
+    "date": "2025-07-10",
+    "tags": ["java", "spring-boot"],
+    "summary": "第一次實作自定義註解，回頭看感覺蠻好玩的，想說紀錄一下。會想要自定義註解的原因主要是以下幾點：專案現行的後端系統因為一些歷史原因，某些 api 會需要攜帶大量參數作為請求（大概 15-20 個的那種大量），同時請求中還有 `update_latestuserLOGINinfo` 這樣不易閱讀的參數。"
+  },
+  {
     "slug": "spring-mvc-handler-exception-resolver",
     "title": "HandlerExceptionResolver：Spring MVC 的全域異常處理機制",
     "date": "2025-06-23",
@@ -47,12 +54,5 @@
     "date": "2025-05-17",
     "tags": ["jwt", "frontend"],
     "summary": "在設計登入流程時，除了基本帳號密碼驗證外，還需考量： 1. 密碼加密傳輸（HTTPS） 2. 前後端驗證結果一致性 3. 多因素驗證（MFA）支援 推薦使用 JWT 或 Session 機制搭配 CSRF 防護，來確保安全性與使用體驗的平衡。"
-  },
-  {
-    "slug": "article-2",
-    "title": "前端元件設計思路",
-    "date": "2025-05-19",
-    "tags": [],
-    "summary": "元件化是現代前端開發的核心概念。以下是幾個建議： - 每個元件只負責單一邏輯功能 - 支援 props 傳值與 event 調用 - UI 與邏輯分離（可配合 hooks 實作） 這能提升維護性、測試便利性，以及跨專案的重用性。"
   }
 ]
