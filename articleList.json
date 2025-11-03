@@ -1,5 +1,12 @@
 [
   {
+    "slug": "spring-boot-fat-jar-encryption-protection-tool",
+    "title": "做了一個 Spring Boot 的 Fat Jar 加密保護工具",
+    "date": "2025-11-03",
+    "tags": ["java", "spring-boot"],
+    "summary": "因為篇幅的原因，直接忽略所有採坑的過程進入重點。功能的實現始於一項主管的需求：公司需要將專案部屬在客戶的主機上運行，但因為技術專利的緣故，老闆希望原始碼的部分內容可以進行加密處理，同時不影響上線後的系統功能，因此需要我們做出一個「可執行的、經加密後的 spring boot fat jar」給客戶運行。"
+  },
+  {
     "slug": "custom-queryparam-alias-spring-binding",
     "title": "自定義 @QueryParamAlias 註解：Controller 的參數別名綁定實踐",
     "date": "2025-07-10",
@@ -47,12 +54,5 @@
     "date": "2025-05-30",
     "tags": ["react"],
     "summary": "花了 2 天的時間，重新改造了自己的個人網站。前一代的網站是用 hugo 建的，要說心得的話，hugo 給使用者的體感其實蠻好的：只要先去 hugo 官網，把執行檔載下來，然後從 hugo 的主題網站挑 1-2 個自己喜歡的風格，抓下來就可以用了。"
-  },
-  {
-    "slug": "article-1",
-    "title": "使用者登入流程設計",
-    "date": "2025-05-17",
-    "tags": ["jwt", "frontend"],
-    "summary": "在設計登入流程時，除了基本帳號密碼驗證外，還需考量： 1. 密碼加密傳輸（HTTPS） 2. 前後端驗證結果一致性 3. 多因素驗證（MFA）支援 推薦使用 JWT 或 Session 機制搭配 CSRF 防護，來確保安全性與使用體驗的平衡。"
   }
 ]
